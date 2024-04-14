@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
-@Entity(name="usuario")
+@Entity(name="atividade")
 public class UserModel {
 
     @Id
@@ -16,6 +16,15 @@ public class UserModel {
 
     @Column(length= 255)
     private String name;
+
+    @Column(length= 255)
+    private String ordem;
+
+    @Column(length= 500)
+    private String descricao;
+
+    @Column(length= 40)
+    private String nivelimportancia;
 
     public UserModel() {}
 
@@ -34,6 +43,33 @@ public class UserModel {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getOrdem() {
+        return ordem;
+    }
+
+    public void setOrdem(String ordem) {
+        this.ordem = ordem;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getNivelimportancia() {
+        return nivelimportancia;
+    }
+
+    public void setNivelimportancia(String nivelimportancia) {
+        this.nivelimportancia = nivelimportancia;
+    }
+
+    
+    
 
     
 

@@ -57,6 +57,9 @@ public class UserService implements UserInterface {
         if (userRepository.existsById(id)) { // Corrigido para usar o parâmetro id
             UserModel user = userRepository.findById(id).get();
             user.setName(newUser.getName());
+            user.setOrdem(newUser.getOrdem());
+            user.setDescricao(newUser.getDescricao());;
+            user.setNivelimportancia(newUser.getNivelimportancia());
             return userRepository.save(user);
         } else {
             throw new UserServiceException("Erro ao tentar editar usuário");
